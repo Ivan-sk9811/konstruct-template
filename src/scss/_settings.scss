@@ -10,7 +10,7 @@ html {
 
 .page {
   height: 100%;
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -18,7 +18,8 @@ html {
   margin: 0;
   min-width: 320px;
   min-height: 100%;
-  font-size: 16px;
+  font-size: 13px;
+  background-color: var(--light-color);
 }
 
 img {
@@ -107,3 +108,54 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--offset);
+
+  @include tablet {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @include small-tablet {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*
+.section-title {
+  margin: 0;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 24px;
+  color: #202020;
+
+  @include mobile {
+    font-size: 18px;
+  }
+}*/
+/*
+.burger {
+  @include burger;
+
+  display: none;
+  --burger-width: 20px;
+  --burger-height: 18px;
+  color: var(--light-color);
+
+  &::after {
+    width: 50%;
+  }
+
+  @include hero-tablet {
+    display: block;
+  }
+}*/
