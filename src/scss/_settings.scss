@@ -19,6 +19,8 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 13px;
+  font-weight: 400;
+  color: var(--text-color);
   background-color: var(--light-color);
 }
 
@@ -142,20 +144,19 @@ a {
     font-size: 18px;
   }
 }*/
-/*
+
 .burger {
   @include burger;
 
   display: none;
   --burger-width: 20px;
   --burger-height: 18px;
-  color: var(--light-color);
+  color: var(--text-color);
 
-  &::after {
-    width: 50%;
-  }
 
-  @include hero-tablet {
+  @include mobile {
     display: block;
+    z-index: 100;
+    color: var(--btn-color);
   }
-}*/
+}

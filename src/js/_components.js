@@ -1,1 +1,3 @@
-console.log('components');
+import './components/smooth-scroll';
+import './components/modals';
+import './components/validation';
