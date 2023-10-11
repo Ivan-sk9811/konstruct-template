@@ -5,7 +5,11 @@
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/btn";
 @import "./components/nav";
 @import "./components/header";
-
+@import "./components/story";
+@import "./components/capabilities";
+@import "./components/touch";
+@import "./components/news";
 

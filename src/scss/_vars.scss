@@ -8,10 +8,12 @@
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
+  --offset: 20px;
+
   // colors
   --light-color: #fff;
   --btn-color: #00a4e5;
-  --text-color: #48555B;
+  --text-color: #48555b;
   --active-color: #0481b3;
   --focus-color: #366274;
 }

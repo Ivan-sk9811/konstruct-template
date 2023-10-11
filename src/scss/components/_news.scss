@@ -1,0 +1,87 @@
+.news {
+  margin-top: -1px;
+  background-color: #171819;
+
+  &__container {
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include small-tablet {
+      gap: 30px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: var(--light-color);
+
+    @include small-tablet {
+      letter-spacing: 0;
+    }
+  }
+
+  &__form {}
+
+  &__form-label {
+    position: relative;
+  }
+
+  &__form-input {
+    display: inline-block;
+		padding: 10px 23px;
+    width: 250px;
+		min-height: 40px;
+		color: var(--bc-color);
+		background-color: var(--light-color);
+
+    @include mobile {
+      width: 220px;
+    }
+
+    &:focus {
+			outline: none;
+		}
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: 0.01em;
+      color: var(--text-color);
+		}
+  }
+
+  &__form-btn {}
+}
+
+.just-validate-error-label {
+	position: absolute;
+	top: 3px;
+	z-index: 100;
+	left: 23px;
+	font-size: 9px;
+	color: #f06666 !important;
+}
+
+.news__form-label:focus .news__form-input {
+	outline: none;
+}
+
+.news__form-label:hover .news__form-input::placeholder {
+	color: var(--active-color);
+}
+
+.news__form-input.focus-visible {
+	outline: none;
+}

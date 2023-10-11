@@ -1,0 +1,150 @@
+.capabilities {
+
+  &__container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 110px;
+    padding-bottom: 110px;
+
+    @include mobile {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__box {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 80px;
+
+    @include height-tablet {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @include mobile {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__box-title {
+    position: relative;
+    align-self: flex-start;
+    justify-self: flex-start;
+    margin: 0;
+    padding-right: 10px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -10px;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background-color: var(--btn-color);
+    }
+
+    @include height-tablet {
+      align-self: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__box-inner {
+    gap: 30px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center
+    }
+  }
+
+  &__box-inner-descr {
+    margin: 0;
+    padding-right: 10px;
+    max-width: 420px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 173%;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+
+    @include small-tablet {
+      max-width: 390px;
+    }
+
+    @include mobile {
+      max-width: 320px;
+    }
+  }
+
+  &__box-inner-link {}
+
+  &__list {
+    row-gap: var(--offset);
+  }
+
+  &__item {
+    grid-column: 4 span;
+    padding: 40px 20px;
+    border: 1px solid #e6e6e6;
+    min-height: 330px;
+
+    @include small-tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+      min-height: 250px;
+    }
+  }
+
+  &__item-article {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__item-article-image {
+    margin-bottom: 25px;
+    width: 66px;
+    height: 75px;
+    color: var(--light-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__item-article-image--1 {
+    background-image: url('../img/capabilities/cap-1.svg');
+  }
+
+  &__item-article-image--2 {
+    background-image: url('../img/capabilities/cap-2.svg');
+  }
+
+  &__item-article-image--3 {
+    background-image: url('../img/capabilities/cap-3.svg');
+  }
+
+  &__item-article-subtitle {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+  }
+
+  &__item-article-descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 177%;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+  }
+}

@@ -1,0 +1,135 @@
+.story {
+  background-color: var(--light-color);
+
+  &__container {
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 120px;
+
+    @include mobile {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 50px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 2px;
+      background-color: var(--btn-color);
+    }
+  }
+
+  &__inner {
+    row-gap: var(--offset);
+  }
+
+  &__inner-text {
+    grid-column: 6 span;
+    flex-direction: column;
+    max-width: 410px;
+
+    @include tablet {
+      grid-column: 8 span;
+      max-width: 100%;
+    }
+
+    @include small-tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+    }
+  }
+
+  &__inner-text-title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+
+    span {
+      color: #16ace8;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__inner-text-descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 177%;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+  }
+
+  &__inner-list {
+    grid-column: 6 span;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: var(--offset);
+    row-gap: var(--offset);
+    padding-top: 20px;
+
+    @include tablet {
+      grid-column: 8 span;
+      padding-top: 0;
+    }
+
+    @include small-tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__inner-item {
+    grid-column: 2 span;
+    padding: 15px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 121%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--light-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include tablet {
+      height: 300px;
+    }
+
+    @include mobile {
+      height: 200px;
+    }
+
+    &--1 {
+      background-image: url('../img/story/plan.jpg');
+    }
+
+    &--2 {
+      background-image: url('../img/story/manage.jpg');
+    }
+
+    &--3 {
+      background-image: url('../img/story/deliver.jpg');
+    }
+  }
+}

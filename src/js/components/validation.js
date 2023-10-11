@@ -1,4 +1,4 @@
-/*import { validateForms } from '../functions/validate-forms';
+import { validateForms } from '../functions/validate-forms';
 
 const rules = [
 	/*{
@@ -14,8 +14,8 @@ const rules = [
 				errorMessage: 'Заполните имя!'
 			}
 		]
-	},
-	{
+	},*/
+	/*{
 	  ruleSelector: '.input-tel',
 	  tel: true,
 	  telError: 'Введите корректный телефон',
@@ -27,7 +27,7 @@ const rules = [
 		}
 	  ]
 	},*/
-	/*{
+	{
 		ruleSelector: '.input-email',
 		rules: [
 			{
@@ -48,11 +48,11 @@ const afterForm = () => {
 	console.log('Произошла отправка, тут можно писать любые действия');
 };
 
-validateForms('.about__form', rules, afterForm);
+validateForms('.news__form', rules, afterForm);
 
 
 
-const rules1 = [
+/*const rules1 = [
 	{
 		ruleSelector: '.input-name',
 		rules: [
