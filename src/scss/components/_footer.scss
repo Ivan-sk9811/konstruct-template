@@ -1,0 +1,262 @@
+.footer {}
+
+.top-footer {
+  background-color: #141a20;
+
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include tablet {
+      row-gap: var(--offset);
+    }
+  }
+
+  &__company {
+    grid-column: 4 span;
+    display: flex;
+    flex-direction: column;
+
+    @include small-tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+    }
+  }
+
+  &__company-title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--light-color);
+  }
+
+  &__company-logo {
+    margin-bottom: 15px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__company-descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 173%;
+    letter-spacing: 0.08em;
+    color: var(--light-color);
+  }
+
+  &__link {
+    grid-column: 4 span;
+    display: flex;
+    flex-direction: column;
+
+    @include small-tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+    }
+  }
+
+  &__link-title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--light-color);
+  }
+
+  &__link-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link-nav-list {}
+
+  &__link-nav-item {}
+
+  &__link-nav-link {
+    margin: -3px;
+    padding: 3px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 227%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--light-color);
+    transition: color .3s ease-out, background-color .3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include for-desktop {
+      &:hover {
+        color: var(--btn-color);
+      }
+    }
+
+    &:active {
+      color: var(--active-color);
+    }
+  }
+
+  &__contact {
+    grid-column: 2 span;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      grid-column: 4 span;
+    }
+
+    @include small-tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+    }
+  }
+
+  &__contact-title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--light-color);
+  }
+
+  &__contact-address {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 145%;
+    letter-spacing: 0.08em;
+    color: var(--light-color);
+  }
+
+  &__contact-tel {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 145%;
+    letter-spacing: 0.08em;
+    color: var(--light-color);
+    transition: color .3s ease-out, background-color .3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include for-desktop {
+      &:hover {
+        color: var(--btn-color);
+      }
+    }
+
+    &:active {
+      color: var(--active-color);
+    }
+  }
+
+  &__contact-email {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 145%;
+    letter-spacing: 0.08em;
+    color: var(--light-color);
+    transition: color .3s ease-out, background-color .3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include for-desktop {
+      &:hover {
+        color: var(--btn-color);
+      }
+    }
+
+    &:active {
+      color: var(--active-color);
+    }
+  }
+
+  &__social-list {
+    grid-column: 2 span;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-top: 23px;
+
+    @include tablet {
+      grid-column: 4 span;
+      padding-top: 0;
+      padding-right: 0;
+      justify-content: flex-start;
+      gap: 30px;
+    }
+
+    @include small-tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+    }
+  }
+
+  &__social-item {}
+
+  &__social-link {}
+}
+
+.bottom-footer {
+  background-color: #171819;
+
+  &__container {
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--light-color);
+
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+}
+
+.top-footer__link-nav-link.focus-visible {
+  background-color: var(--btn-color);
+  color: var(--light-color);
+}
+
+.top-footer__contact-tel.focus-visible {
+  background-color: var(--btn-color);
+  color: var(--light-color);
+}
+
+.top-footer__contact-email.focus-visible {
+  background-color: var(--btn-color);
+  color: var(--light-color);
+}

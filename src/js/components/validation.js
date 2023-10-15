@@ -100,11 +100,11 @@ const afterForm1 = () => {
 	console.log('Произошла отправка, тут можно писать любые действия');
 };
 
-validateForms('.contacts__form', rules1, afterForm1);
+validateForms('.contacts__form', rules1, afterForm1);*/
 
-const rules2 = [
+const rules1 = [
 	{
-		ruleSelector: '.input-name1',
+		ruleSelector: '.input-name',
 		rules: [
 			{
 				rule: 'minLength',
@@ -118,7 +118,7 @@ const rules2 = [
 		]
 	},
 	{
-	  ruleSelector: '.input-tel',
+	  ruleSelector: '.input-tel1',
 	  tel: true,
 	  telError: 'Введите корректный телефон',
 	  rules: [
@@ -130,7 +130,7 @@ const rules2 = [
 	  ]
 	},
 	{
-		ruleSelector: '.input-email2',
+		ruleSelector: '.input-email',
 		rules: [
 			{
 				rule: 'required',
@@ -146,9 +146,8 @@ const rules2 = [
 	},
 ];
 
-const afterForm2 = () => {
+const afterForm1 = () => {
 	console.log('Произошла отправка, тут можно писать любые действия');
 };
 
-validateForms('.graph-modal__form', rules2, afterForm2);
-*/
+validateForms('.graph-modal__form', rules1, afterForm1);
